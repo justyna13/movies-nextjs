@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
+import { SessionProvider } from 'next-auth/react';
 
 import { SidebarProvider } from '@/components/ui/sidebar';
 
@@ -9,5 +10,9 @@ type TProps = {
 };
 
 export default function Provider({ children }: TProps) {
-	return <SidebarProvider>{children}</SidebarProvider>;
+	return (
+		<SessionProvider>
+			<SidebarProvider>{children}</SidebarProvider>
+		</SessionProvider>
+	);
 }

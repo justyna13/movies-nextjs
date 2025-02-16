@@ -1,12 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import { cn } from '@/utils/libs/tailwind';
+import { useIsMobile } from '@/utils/hooks/use-mobile';
+import { cn } from '@/utils/lib/tailwind';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, VariantProps } from 'class-variance-authority';
 import { PanelLeft } from 'lucide-react';
 
-import { useIsMobile } from '@/utils/hooks/use-mobile';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';

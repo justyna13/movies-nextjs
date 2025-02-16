@@ -1,3 +1,4 @@
+import { Slugs } from '@/constants/slugs';
 import UserRepository from '@/server/db/repositories/user-repository';
 import {
 	accountsTable,
@@ -89,9 +90,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 		},
 	},
 	pages: {
-		signIn: '/login',
-		signOut: '/login',
-		error: '/login',
+		signIn: Slugs.LOGIN,
+		signOut: Slugs.LOGIN,
+		error: Slugs.LOGIN,
 	},
 	session: {
 		strategy: 'jwt',

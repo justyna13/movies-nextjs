@@ -3,7 +3,7 @@ import { Poppins } from 'next/font/google';
 
 import './globals.css';
 
-import { cn } from '@/utils/libs/tailwind';
+import { cn } from '@/utils/lib/tailwind';
 
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import Footer from '@/components/layout/footer';

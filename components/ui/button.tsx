@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { cn } from '@/utils/libs/tailwind';
+import { cn } from '@/utils/lib/tailwind';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 
