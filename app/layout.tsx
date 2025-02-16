@@ -5,8 +5,10 @@ import './globals.css';
 
 import { cn } from '@/utils/libs/tailwind';
 
+import { SidebarTrigger } from '@/components/ui/sidebar';
 import Footer from '@/components/layout/footer';
-import Header from '@/components/layout/header';
+import AppSidebar from '@/components/layout/sidebar';
+import Provider from '@/components/providers/providers';
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -32,9 +34,14 @@ export default function RootLayout({
 					poppins.variable,
 				)}
 			>
-				<Header />
-				<main>{children}</main>
-				<Footer />
+				<Provider>
+					<AppSidebar />
+					<main>
+						<SidebarTrigger />
+						{children}
+					</main>
+					<Footer />
+				</Provider>
 			</body>
 		</html>
 	);
