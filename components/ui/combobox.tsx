@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -69,7 +68,7 @@ export default function Combobox({
 					filter={(
 						value: string,
 						search: string,
-						keywords: string[],
+						keywords?: string[],
 					) => {
 						const extendValue = `${value} ${keywords?.join(' ')}`;
 						if (
