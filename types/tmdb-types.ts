@@ -264,3 +264,17 @@ export type TSearchTMDBTVSeriesReq = {
 	region?: string;
 	year?: string;
 };
+
+export type TDiscoverTMDBMovieReq = {
+	language?: string;
+	primary_release_year?: string;
+	with_genres?: string;
+	with_origin_country?: string;
+};
+
+export type TDiscoverTMDBTVReq = {
+	language?: string;
+	first_air_year?: string;
+	with_genres?: string;
+	with_origin_country?: string;
+};
